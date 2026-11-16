@@ -1,0 +1,13 @@
+{
+  "run_at_utc": "2026-11-15T19:10:29.512405+00:00",
+  "python": "3.12.3",
+  "scikit_learn": "1.9.1",
+  "command": ".venv/bin/python experiments/synthetic-demo/train.py",
+  "data_type": "synthetic only",
+  "warning": "target directly encoded in origin_mismatch; results are not real-world performance",
+  "sha256": {
+    "data/synthetic_training.csv": "3516a4cafd9388f81163dc9f9e0268bb30af08912948a320cb9353773df28390",
+    "artifacts/model.joblib": "ce364cd11bf3561c9f129b9b40276e4b579eae39964363aa2eaf436dbd77a2f2",
+    "artifacts/metrics.json": "4a78759c11bfb421be25c61bf1629170d119a532c2de402144c47a7dfeff9c39"
+  }
+}

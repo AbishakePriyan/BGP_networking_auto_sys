@@ -1,0 +1,15 @@
+{
+  "source_file": "data/youtube_2008.jsonl",
+  "source_sha256": "748230597020b6febc376862fcbebad0850162b46fbd8b9df3703fffad253d15",
+  "output_file": "data/features/youtube_2008.jsonl",
+  "output_sha256": "a45dd47418746f6ea284ad76f575e4eedb1fd19f6411b65bb381e85ea5a9beb6",
+  "feature_contract": "historical-update-v1",
+  "collector_compatibility": "historical-updates only",
+  "history_complete": false,
+  "count": 38,
+  "label_counts": {
+    "unknown": 12,
+    "incident_match": 26
+  },
+  "warning": "Features use only supplied prior data; gaps and unknown labels remain unresolved."
+}

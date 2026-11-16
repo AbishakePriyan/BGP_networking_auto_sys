@@ -1,0 +1,56 @@
+name: bgpguard-v2
+services:
+  r1:
+    image: quay.io/frrouting/frr:10.2.1
+    container_name: bgpguard-v2-r1
+    hostname: r1
+    cap_add: [NET_ADMIN, NET_RAW, SYS_ADMIN]
+    sysctls:
+      net.ipv4.ip_forward: "1"
+      net.ipv4.conf.all.rp_filter: "0"
+      net.ipv4.conf.default.rp_filter: "0"
+    volumes:
+      - ./routers/daemons:/etc/frr/daemons:ro
+      - ./routers/vtysh.conf:/etc/frr/vtysh.conf:ro
+      - ./routers/r1.conf:/etc/frr/frr.conf:ro
+    networks:
+      lab:
+        ipv4_address: 10.199.0.2
+  r2:
+    image: quay.io/frrouting/frr:10.2.1
+    container_name: bgpguard-v2-r2
+    hostname: r2
+    cap_add: [NET_ADMIN, NET_RAW, SYS_ADMIN]
+    sysctls:
+      net.ipv4.ip_forward: "1"
+      net.ipv4.conf.all.rp_filter: "0"
+      net.ipv4.conf.default.rp_filter: "0"
+    volumes:
+      - ./routers/daemons:/etc/frr/daemons:ro
+      - ./routers/vtysh.conf:/etc/frr/vtysh.conf:ro
+      - ./routers/r2.conf:/etc/frr/frr.conf:ro
+    networks:
+      lab:
+        ipv4_address: 10.199.0.3
+  r3:
+    image: quay.io/frrouting/frr:10.2.1
+    container_name: bgpguard-v2-r3
+    hostname: r3
+    cap_add: [NET_ADMIN, NET_RAW, SYS_ADMIN]
+    sysctls:
+      net.ipv4.ip_forward: "1"
+      net.ipv4.conf.all.rp_filter: "0"
+      net.ipv4.conf.default.rp_filter: "0"
+    volumes:
+      - ./routers/daemons:/etc/frr/daemons:ro
+      - ./routers/vtysh.conf:/etc/frr/vtysh.conf:ro
+      - ./routers/r3.conf:/etc/frr/frr.conf:ro
+    networks:
+      lab:
+        ipv4_address: 10.199.0.4
+networks:
+  lab:
+    internal: true
+    ipam:
+      config:
+        - subnet: 10.199.0.0/16

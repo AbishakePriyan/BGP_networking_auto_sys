@@ -1,0 +1,39 @@
+{
+  "0": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 300.0
+  },
+  "1": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 300.0
+  },
+  "accuracy": 1.0,
+  "macro avg": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 600.0
+  },
+  "weighted avg": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 600.0
+  },
+  "confusion_matrix": [
+    [
+      300,
+      0
+    ],
+    [
+      0,
+      300
+    ]
+  ],
+  "data_source": "Synthetic ownership-mismatch scenarios only",
+  "limitation": "Labels are generated from origin_mismatch, so this is a pipeline demonstration. A registry rule can solve this demo directly. These scores do not show an advantage over rules or performance on real BGP hijacks. Train and evaluate on independent events before making those claims."
+}

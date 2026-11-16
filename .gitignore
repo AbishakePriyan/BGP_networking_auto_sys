@@ -1,0 +1,16 @@
+.venv/
+.tools/
+__pycache__/
+.pytest_cache/
+*.py[cod]
+frontend/node_modules/
+frontend/dist/
+logs/
+data/cache/
+data/*.gz
+data/synthetic_training.csv
+.env
+*.part
+
+# Generated experiment model and synthetic dataset
+experiments/synthetic-demo/artifacts/model.joblib
